@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # scope 'api/v1' do
   namespace :api do
     namespace :v1 do
-      resources :todos, parma: :slug
+      resources :todos, param: :slug
     end
   end
 

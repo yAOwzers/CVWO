@@ -55,7 +55,6 @@ const Airlines = () => {
     })
 
     return (
-
         <Home>
             <Header>
                 <h1>OpenFlights</h1>
@@ -65,7 +64,6 @@ const Airlines = () => {
                 {grid}
             </Grid>
         </Home>
-
     )
 }
 
