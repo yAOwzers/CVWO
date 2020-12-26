@@ -3,7 +3,7 @@ module Api
   module V1
     class TodosController < ApplicationController
       protect_from_forgery with: :null_session
-      
+
       def index
         todos = Todo.all
 
@@ -29,7 +29,7 @@ module Api
       def update
         todo = Todo.find_by(slug: params[:slug])
 
-        if todo.update(todo_params)
+        if todo.update(todo_param)
           render json: TodoSerializer.new(todo).serialized_json
         else
           render json: {error: todo.errors.messages}, status: 422
