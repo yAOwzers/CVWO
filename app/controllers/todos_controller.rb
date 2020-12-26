@@ -4,21 +4,39 @@ class TodosController < ApplicationController
     render json: todos
   end
 
+  def show
+    todo = Todo.find_by(slug: params[:slug])
+    render json: todos
+  end
+
   def create
-    todo = Todo.create(todo_param)
-    render json: todo
+    todo = Todo.new(todo_param)
+
+    if todo.save
+      render json: todo
+    else
+      render json: {error: todo.errors.messages}, status: 422
+    end
   end
 
   def update
-    todo = Todo.find(params[:id])
-    todo.update_attributes(todo_param)
-    render json: todo
+    todo = Todo.find_by(slug: params[:slug])
+
+    if todo.update(todo_params)
+      render json: todo
+    else
+      render json: {error: todo.errors.messages}, status: 422
+    end
   end
 
   def destroy
-    todo = Todo.find(params[:id])
-    todo.destroy
-    head :no_content, status: :ok
+    todo = Todo.find_by(slug: params[:slug])
+
+    if todo.destroy
+      head :no_content
+    else
+      render json: {error: todo.errors.messages}, status: 422
+    end
   end
   
   private
