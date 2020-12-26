@@ -1,7 +1,7 @@
 import React from 'react'
-// import {Route, Switch, Fragment} from 'react-router-dom'
-// import Airlines from './Todos/Todos'
-// import Airline from './Todo/Todo'
+import {Route, Switch, Fragment} from 'react-router-dom'
+import Airlines from './Todos/Todos'
+import Airline from './Todo/Todo'
 
 const App = () => {
     return (
