@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :todos, parma: :slug
+    end
   end
- 
-  
+
+  get '*path', to: 'pages#index', via: :all
   # get 'todos/index'
   # get 'todos/create'
   # get 'todos/update'
