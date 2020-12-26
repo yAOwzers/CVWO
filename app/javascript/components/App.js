@@ -5,11 +5,10 @@ import Airline from './Todo/Todo'
 
 const App = () => {
     return (
-        <div>Hello from App.js</div>
-        // <Switch>
-        //     <Route exact path="/" component={Airlines}/>
-        //     <Route exact path="/todos/:slug" component={Airline}/>
-        // </Switch>
+        <Switch>
+            <Route exact path="/" component={Airlines}/>
+            <Route exact path="/todos/:slug" component={Airline}/>
+        </Switch>
     )
 }
 
