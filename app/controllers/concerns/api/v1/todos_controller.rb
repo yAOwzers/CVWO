@@ -2,6 +2,8 @@
 module Api
   module V1
     class TodosController < ApplicationController
+      protect_from_forgery with: :null_session
+      
       def index
         todos = Todo.all
 
