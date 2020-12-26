@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  scope 'api/v1' do
-    resources :todos
+  root 'pages#index'
+
+  # scope 'api/v1' do
+  namespace :api do
+    namespace :v1 do
+      resources :todos, parma: :slug
   end
+ 
   
   # get 'todos/index'
   # get 'todos/create'
