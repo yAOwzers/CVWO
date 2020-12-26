@@ -1,19 +1,21 @@
 class TodosController < ApplicationController
   def index
-    todos = Todo.order("created_at DESC")
-    render json: todos
+    todos = Todo.all
+
+    render json: TodoSerializer.new(todos).serialized_json
   end
 
   def show
     todo = Todo.find_by(slug: params[:slug])
-    render json: todos
+
+    render json: TodoSerializer.new(todos).serialized_json
   end
 
   def create
     todo = Todo.new(todo_param)
 
     if todo.save
-      render json: todo
+      render json: TodoSerializer.new(todos).serialized_json
     else
       render json: {error: todo.errors.messages}, status: 422
     end
@@ -23,7 +25,7 @@ class TodosController < ApplicationController
     todo = Todo.find_by(slug: params[:slug])
 
     if todo.update(todo_params)
-      render json: todo
+      render json: TodoSerializer.new(todos).serialized_json
     else
       render json: {error: todo.errors.messages}, status: 422
     end
@@ -40,6 +42,7 @@ class TodosController < ApplicationController
   end
   
   private
+  
     def todo_param
       params.require(:todo).permit(:title, :done)
     end
