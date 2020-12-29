@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Airline from './Airline'
+import Todo from './Todo'
+
+const Todos = () => {
+    const [airlines, setAirlines] = useState([])
+
+    useEffect(() => {
+        axios.get('/api/v1/todos.json')
+        .then( resp => {
+            setAirlines(resp.data.data)
+        } )
+        .catch( resp => console.log(resp) )
+    }, [airlines.length])
 
     return (
-        <Home>
-            <Header>
-                <h1>OpenFlights</h1>
-                <Subheader> Honest, unbiased airline reviews.</Subheader>
-            </Header>
-            <Grid>
-                {grid}
-            </Grid>
-        </Home>
+      
     )
 }
 
-export default Airlines
+export default Todos

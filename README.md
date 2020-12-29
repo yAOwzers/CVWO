@@ -1,24 +1,93 @@
-# README
+# CVWO Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A To-Do application for Volunteer Organisations to keep track of current deadlines and tasks on hand.
 
-Things you may want to cover:
+This application uses a React frontend, with Ruby as the API and Postgresql as the database.
 
-* Ruby version
+## Installation
 
-* System dependencies
+### Clone the Repostitory
 
-* Configuration
+```
+git clone https://github.com/yAOwzers/CVWO.git
+cd CVWO
+```
 
-* Database creation
+### Check your Ruby version
 
-* Database initialization
+```
+ruby -v
+```
 
-* How to run the test suite
+Ensure that your Ruby version is `ruby 2.7.2`
+If not, you can install the right ruby version using [rbenv](https://github.com/rbenv/rbenv):
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rbenv install 2.7.2
+```
 
-* Deployment instructions
+### Dependencies
 
-* ...
+Ensure that you download both [Bundler](https://github.com/rubygems/bundler) and [Yarn](https://classic.yarnpkg.com/en/docs/install#windows-stable).
+
+#### Installing Bundler
+
+To install (or update to the latest version):
+
+```
+gem install bundler
+```
+
+If there are any issues, refer to the [troubleshooting section](https://github.com/rubygems/bundler).
+
+#### Installing Yarn
+
+You can install [Yarn](https://classic.yarnpkg.com/en/docs/install#windows-stable) following the steps on the website.
+
+### Database
+
+Ensure that you install [Postgresql](https://www.postgresql.org/) for the database.
+
+#### To create the database
+
+```
+rails db:create
+```
+
+#### To initialize the database
+
+```
+rails db:migrate
+```
+
+## Other Add Ons
+
+### Fast Json API
+
+Fast Json for the API serialization.
+
+You can refer to the repo [here](https://github.com/Netflix/fast_jsonapi).
+
+#### Installation
+
+Add this line to your application's Gemfile:
+
+```
+gem 'fast_jsonapi'
+```
+
+Execute
+
+```
+$ bundle install
+```
+
+## Things to Include in later
+
+- System dependencies
+
+- How to run the test suite
+
+- Services (job queues, cache servers, search engines, etc.)
+
+- Deployment instructions
