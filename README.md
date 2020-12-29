@@ -1,5 +1,7 @@
 # CVWO Project
 
+![Chek](https://imgur.com/a/T84cyen.jpg)
+
 A To-Do application for Volunteer Organisations to keep track of current deadlines and tasks on hand.
 
 This application uses a React frontend, with Ruby as the API and Postgresql as the database.
