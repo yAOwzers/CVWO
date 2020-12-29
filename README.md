@@ -1,6 +1,8 @@
 # CVWO Project
 
-![Chek](https://imgur.com/a/T84cyen.jpg)
+<p align="center">
+    <img src="https://imgur.com/SXyKzct.jpg" width="200" height="200">
+</p>
 
 A To-Do application for Volunteer Organisations to keep track of current deadlines and tasks on hand.
 
