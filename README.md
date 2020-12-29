@@ -86,6 +86,20 @@ Execute
 $ bundle install
 ```
 
+## Starting the Server
+
+Start the server by executing the following command:
+
+```
+$ rails s
+```
+
+You should see a default template of Rails when entering localhost:3000 in the url of your browser.
+
+<p align="center">
+    <img src="https://imgur.com/5Jzw4DJ.jpg">
+</p>
+
 ## Things to Include in later
 
 - System dependencies
