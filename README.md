@@ -1,12 +1,12 @@
-# CVWO Project
+# Chek (CVWO Project)
 
 <p align="center">
     <img src="https://imgur.com/SXyKzct.jpg" width="200" height="200">
 </p>
 
-A To-Do application for Volunteer Organisations to keep track of current deadlines and tasks on hand.
+Chek is a To-Do application for Volunteer Organisations to keep track of current deadlines and tasks on hand.
 
-This application uses a React frontend, with Ruby as the API and Postgresql as the database.
+Chek uses a React frontend, with Ruby as the API and Postgresql as the database.
 
 ## Installation
 
